@@ -1,0 +1,44 @@
+{
+  "result": {
+    "payload": {
+      "type": "receipt-template",
+      "recipientName": "台北市中正區重慶南路一段122號",
+      "orderNumber": "外帶 1號",
+      "currency": "TWD",
+      "paymentMethod": "現金支付",
+      "timestamp": "1428444852",
+      "summary": {
+        "totalCost": 56.14
+      },
+      "elements": [
+        {
+          "title": "吉士堡",
+          "subtitle": "吉士堡介紹",
+          "quantity": 2,
+          "price": 50,
+          "currency": "TWD",
+          "imageUrl": "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5MC8xMzQvb3JpZ2luYWwvcmFiYml0LmpwZw=="
+        },
+        {
+          "title": "火腿蛋餅",
+          "subtitle": "火腿蛋餅介紹",
+          "quantity": 1,
+          "price": 25,
+          "currency": "TWD",
+          "imageUrl": "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5MC8xMzQvb3JpZ2luYWwvcmFiYml0LmpwZw=="
+        }
+      ],
+      "chatId": "2227048243983599",
+      "messageId": null
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "e0ce6877.a39798"
+  },
+  "message": "",
+  "status": 200
+}

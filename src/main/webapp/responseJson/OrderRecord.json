@@ -1,0 +1,50 @@
+{
+  "result": {
+    "payload": {
+      "type": "generic-template",
+      "aspectRatio": "horizontal",
+      "sharable": true,
+      "elements": [
+        {
+          "title": "108/2/3",
+          "subtitle": "AM 10:20",
+          "buttons": [
+            {
+              "type": "postback",
+              "label": "查看",
+              "value": "1phbzchv1dyvr6u",
+              "answer": "",
+              "alert": false,
+              "style": "default"
+            }
+          ]
+        },
+        {
+          "title": "108/3/8",
+          "subtitle": "AM 9:18",
+          "buttons": [
+            {
+              "type": "postback",
+              "label": "查看",
+              "value": "7sqe2honfgu3aep",
+              "answer": "",
+              "alert": false,
+              "style": "default"
+            }
+          ]
+        }
+      ],
+      "chatId": "2227048243983599",
+      "messageId": null
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "e0ce6877.a39798"
+  },
+  "message": "",
+  "status": 200
+}

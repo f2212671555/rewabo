@@ -1,0 +1,36 @@
+{
+  "result": {
+    "payload": {
+      "type": "quick-replies",
+      "content": "想知道什麼餐廳資訊~",
+      "chatId": "2227048243983599",
+      "messageId": "EZmicuuu_8PlAyEB9VZKKvnorUe71_yCEq9QmuomnSJevFbZNBsLGYt20mn2WWnyR_rzo9TH4-kVpboJEQ8f1Q",
+      "buttons": [
+        {
+          "type": "quick-reply",
+          "label": "地址",
+          "value": "address"
+        },
+        {
+          "type": "quick-reply",
+          "label": "營業時間",
+          "value": "businessHours"
+        },
+        {
+          "type": "quick-reply",
+          "label": "優惠資訊",
+          "value": "offerInfo"
+        }
+      ]
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "2f9a61f5.48acde"
+  },
+  "message": "",
+  "status": 200
+}

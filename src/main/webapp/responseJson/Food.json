@@ -1,0 +1,32 @@
+{
+  "result": {
+    "payload": {
+      "type": "generic-template",
+      "aspectRatio": "horizontal",
+      "sharable": true,
+      "elements": [
+        {
+          "title": "招牌漢堡",
+          "subtitle": "$30",
+          "imageUrl": "http://76.com.tw/happy/download/04/images/03.jpg"
+        },
+        {
+          "title": "吉士堡",
+          "subtitle": "$40",
+          "imageUrl": "http://76.com.tw/happy/download/04/images/03.jpg"
+        }
+      ],
+      "chatId": "2227048243983599",
+      "messageId": null
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "e0ce6877.a39798"
+  },
+  "message": "",
+  "status": 200
+}

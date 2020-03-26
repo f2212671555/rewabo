@@ -1,0 +1,46 @@
+{
+  "nicp": {
+    "shopKeeper": {
+      "id": ""
+    },
+    "urls": {
+      "baseUrl": "",
+      "services": {
+        "webhookUrl": "/webhook",
+        "receiveCustomerOrderUrl": "/ReceiveCustomerOrder",
+        "pushUrl": "/Push"
+      }
+    }
+  },
+  "rewabo": {
+    "platform": {
+      "name": "Rewabo",
+      "type": "早餐店",
+      "address": "100台北市中正區重慶南路一段122號",
+      "googleMapUrl": "https://goo.gl/maps/gxj8qSP1LpNgmnV76"
+    },
+    "urls": {
+      "baseUrl": "",
+      "webs": {
+        "orderUrl": "/order.html",
+        "orderTargetContentUrl": "/order.html?content=",
+        "historyOrderUrl": "/historyOrder.html"
+      }
+    }
+  },
+  "google": {
+    "api": {
+      "dialogflow": {
+        "authUrl": "https://www.googleapis.com/auth/dialogflow",
+        "baseUrl": "",
+        "intents": {
+          "listUrl": "/agent/intents?intentView=INTENT_VIEW_FULL",
+          "getUrl": "/agent/intents/<Intent_ID>?intentView=INTENT_VIEW_FULL",
+          "createUrl": "/agent/intents?intentView=INTENT_VIEW_FULL",
+          "deleteUrl": "/agent/intents/<Intent_ID>",
+          "addTrainingPhrasesUrl": "/agent/intents/<Intent_ID>?intentView=INTENT_VIEW_FULL&updateMask=trainingPhrases"
+        }
+      }
+    }
+  }
+}

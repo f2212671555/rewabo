@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>線上訂餐</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="expires" content="0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+        crossorigin='anonymous'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/order.js" type="text/javascript"></script>
+  <style>
+    body {
+      position: relative;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    img {
+
+      width: 100%;
+      height: 50vw;
+      object-fit: cover;
+
+    }
+
+    div.scrollmenu {
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    div.scrollmenu a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+
+    div.scrollmenu a:hover {
+      background-color: #777;
+    }
+
+    .soldOutMask {
+      opacity: 0.5;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="tab1" class="tab_content" style="display: block; ">
+  <nav id="navBarFixTop" class="navbar fixed-top bg-dark navbar-dark">
+    <div id="navBar" class="scrollmenu">
+      <!--.js-->
+    </div>
+  </nav>
+  <div id="center">
+    <!--.js-->
+  </div>
+  <div class="card card-body">
+    <button type="button" id="checkAdminModalButton" class="closeCheckAdminModalButton btn btn-danger"
+            onclick="handleCheckAdminModal()">開啟admin權限
+    </button>
+    <div id="adminSection" style="display: none">
+<!--      OAO-->
+    </div>
+  </div>
+  <nav class="navbar fixed-bottom ">
+    <button type="button" class="btn btn-secondary btn-lg btn-block" id="toOrder">前往訂單</button>
+  </nav>
+</div>
+<div id="tab2" class="tab_content" style="display: none; ">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar fixed-top bg-dark navbar-dark ">
+        <div class="col-4">
+          <button type="button" class="btn btn-link" id="backMenu">
+            <i class='fas fa-long-arrow-alt-left' style='font-size:36px;color:white'></i>
+          </button>
+        </div>
+        <div class="col-8">
+          <div class="text-white">您的訂單</div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <div class="alert text-white" style="background: #49525A;">訂單內容</div>
+      <div id="orderContent" class="card-body"></div>
+      <h5>
+        <div class="alert text-white" align="right" style="background: #49525A;">總計<span
+            id="totalPriceTmp" class="badge badge-pill badge-info">NT$0</span></div>
+      </h5>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4">
+            <h5 class="card-title">用餐方式</h5>
+          </div>
+          <div class="col-8">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary" id="internalUse">內用</button>
+              <button type="button" class="btn btn-primary" id="externalUse">外帶</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card collapse" id="collapseTableNum">
+
+      <div class="card card-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">桌號</span>
+          </div>
+          <input type="text" class="form-control" aria-label="內用桌號" id="tableNum"
+                 oninput="enableInternalUseSubmit()">
+          <div class="input-group-prepend">
+            <span class="input-group-text">號桌</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">用餐人數</span>
+          </div>
+          <input type="text" class="form-control" aria-label="用餐人數" id="eaterNum"
+                 oninput="enableInternalUseSubmit()">
+          <div class="input-group-prepend">
+            <span class="input-group-text">人</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="card card-body">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">備註</span>
+      </div>
+      <textarea class="form-control" aria-label="With textarea" id="Note"></textarea>
+    </div>
+  </div>
+
+
+  <div class="card card-body">
+    <p class="card-text">我做的安心 您吃的放心
+    </p>
+    <p class="card-text">
+      <small class="text-muted">@2019 made by 搞頑皮</small>
+    </p>
+  </div>
+
+  <nav class="navbar">
+    <button type="button" class="btn btn-secondary btn-lg btn-block" id="submit" disabled>送出訂單
+    </button>
+  </nav>
+</div>
+<div id="myModal">
+
+</div>
+<div id="hintModal">
+
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    $(".tab_content").hide();
+    $("#tab1").show();
+
+  });
+</script>
+<script type="text/javascript">
+  $("#toOrder").click(function () {
+    $(".tab_content").hide();
+    $("#tab2").show();
+  });
+
+  $("#backMenu").click(function () {
+    $(".tab_content").hide();
+    $("#tab1").show();
+  });
+</script>
+<script type="text/javascript">
+  $('#internalUse').click(function () {
+    $(this).addClass("active");
+    $('#externalUse').removeClass("active");
+    $('#collapseTableNum').collapse('show');
+    enableInternalUseSubmit();
+  });
+
+  $('#externalUse').click(function () {
+    $(this).addClass("active");
+    $('#internalUse').removeClass("active");
+    $('#collapseTableNum').collapse('hide');
+    $('#tableNum').val("");
+    $('#eaterNum').val("");
+    enableExternalUseSubmit();
+  });
+</script>
+<script>
+  $('#orderContent').bind('DOMSubtreeModified', function () {
+    let totalPriceTmp = calculateTotalPrice(generateMeals());
+    let obj = document.getElementById('totalPriceTmp');
+    obj.innerHTML = "NT$" + totalPriceTmp.toString();
+    if ($('#collapseTableNum').hasClass('show') && $('#internalUse').hasClass('active')) {
+      enableInternalUseSubmit();
+    } else if (!$('#collapseTableNum').hasClass('show') && $('#externalUse').hasClass('active')) {
+      enableExternalUseSubmit();
+    }
+  })
+</script>
+</body>
+
+</html>

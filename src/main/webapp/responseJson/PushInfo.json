@@ -1,0 +1,36 @@
+{
+  "userID": [
+    "1289859468307573",
+    "5861606921075860"
+  ],
+  "message": "",
+  "result": {
+    "payload": {
+      "type": "inline-buttons",
+      "name": "按鈕範本",
+      "content": "本日特餐：豬排鐵板麵+中杯冰紅 $40",
+      "chatId": "",
+      "messageId": "-sARQPkFD63MeBPcExqR-fnorUe71_yCEq9QmuomnSJmSViesjgfViXLyT9frJErUO2WYLNE23eZmREK6fP8vw",
+      "buttons": [
+        {
+          "type": "url",
+          "label": "前往並加入餐點",
+          "url": "https://ai-rest.cse.ntou.edu.tw/",
+          "webViewHeightRatio": "full",
+          "extensions": true,
+          "answer": "",
+          "alert": false
+        }
+      ]
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": ""
+      }
+    },
+    "_msgid": "301471b6.16aeae"
+  },
+  "config": {},
+  "originalPlatform": "bossWebUI"
+}

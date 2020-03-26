@@ -1,0 +1,46 @@
+{
+  "result": {
+    "payload": {
+      "type": "quick-replies",
+      "content": "歡迎來到ooxx早餐店~",
+      "chatId": "2227048243983599",
+      "messageId": "EZmicuuu_8PlAyEB9VZKKvnorUe71_yCEq9QmuomnSJevFbZNBsLGYt20mn2WWnyR_rzo9TH4-kVpboJEQ8f1Q",
+      "buttons": [
+        {
+          "type": "quick-reply",
+          "label": "餐廳資訊",
+          "value": "restInfo"
+        },
+        {
+          "type": "quick-reply",
+          "label": "查看菜單",
+          "value": "viewMenu"
+        },
+        {
+          "type": "quick-reply",
+          "label": "線上點餐",
+          "value": "orderOnline"
+        },
+        {
+          "type": "quick-reply",
+          "label": "查看訂單",
+          "value": "viewOrder"
+        },
+        {
+          "type": "quick-reply",
+          "label": "要吃什麼",
+          "value": "eatWhat"
+        }
+      ]
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "2f9a61f5.48acde"
+  },
+  "message": "",
+  "status": 200
+}

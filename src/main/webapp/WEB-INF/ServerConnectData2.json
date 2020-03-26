@@ -1,0 +1,14 @@
+{
+  "rewaboServerLocation": "",
+  "nicpServerLocation": "",
+  "rewaboServerIP": "",
+  "tomcatPort": ,
+  "mqttPort": ,
+  "mongoDBPort": ,
+  "rewaboCloudBaseURL": "",
+  "rewaboLocalBaseURL": "",
+  "nicpCloudBaseURL": "",
+  "rewaboAppContextPath": "",
+  "dbHost": "",
+  "dbName": ""
+}

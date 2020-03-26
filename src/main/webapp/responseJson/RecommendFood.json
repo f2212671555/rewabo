@@ -1,0 +1,31 @@
+{
+  "result": {
+    "payload": {
+      "type": "inline-buttons",
+      "name": "按鈕範本",
+      "content": "推薦 火腿蛋餅+大杯冰奶",
+      "chatId": "2227048243983599",
+      "messageId": "J3C2zAMqJavQEQS9DF2cJPnorUe71_yCEq9QmuomnSLQmc0lBzKhUHzcJoLwBsGulJcs6Radm5fScKXNpxWB9Q",
+      "buttons": [
+        {
+          "type": "url",
+          "label": "前往並加入餐點",
+          "url": "https://ai-rest.cse.ntou.edu.tw/?meal1=hamQuiche&meal2=mugOfIceMilk",
+          "webViewHeightRatio": "full",
+          "extensions": true,
+          "answer": "",
+          "alert": false
+        }
+      ]
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "358a5ddd.e95152"
+  },
+  "message": "",
+  "status": 200
+}

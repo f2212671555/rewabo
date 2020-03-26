@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        歷史訂單
+    </title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-datepicker.zh-TW.min.js"></script>
+
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+    <script type="text/css" src="assets/css/bootstrap-datepicker3.min.css"></script>
+
+
+    <script type="text/javascript" src="assets/js/historyOrder.js"></script>
+
+</head>
+
+<body>
+
+<div class="row-12">
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="col-4">
+            <button type="button" class="btn btn-link" id="backButton">
+                <i class='fas fa-long-arrow-alt-left' style='font-size:36px;color:white'></i>
+            </button>
+        </div>
+        <div class="col-8">
+            <div class="text-white">歷史訂單</div>
+        </div>
+    </nav>
+</div>
+
+
+<div class="card card-body">
+    <div class="row">
+        <div class="input-group">
+            <input class="from_date col form-control input-lg" placeholder="起始日期" type="text" name="from_date">
+            <div class="input-group-append" >
+                <span class="input-group-text" >至</span>
+            </div>
+            <input class="to_date col form-control input-lg" placeholder="結束日期" type="text" name="to_date" >
+        </div>
+    </div>
+        <br>
+    <div class="row">
+        <button id="reset-date" type="button" class="btn btn-outline-primary col">Reset</button>
+        <button id="submit" type="button" class="btn btn-outline-primary col">Submit</button>
+    </div>
+</div>
+
+
+
+
+
+<div id="orderContent">
+    <!-- trigger modal -->
+</div>
+<div class="card card-body">
+    <p class="card-text">我做的安心 您吃的放心
+    </p>
+    <p class="card-text"><small class="text-muted">@2019 made by 搞頑皮</small></p>
+</div>
+<div id ="myModal">
+    <!-- Modal -->
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+    $(function () {
+
+
+        $(".from_date").datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+
+        }).on('changeDate', function (selected) {
+            var startDate = new Date(selected.date.valueOf());
+            $('.to_date').datepicker('setStartDate', startDate);
+        }).on('clearDate', function (selected) {
+            $('.to_date').datepicker('setStartDate', null);
+        });
+        $(".to_date").datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+
+        }).on('changeDate', function (selected) {
+            var endDate = new Date(selected.date.valueOf());
+            $('.from_date').datepicker('setEndDate', endDate);
+        }).on('clearDate', function (selected) {
+            $('.from_date').datepicker('setEndDate', null);
+        });
+
+        $("#reset-date").click(function () {
+            $('.from_date').val("").datepicker("update");
+            $('.to_date').val("").datepicker("update");
+        })
+
+
+    });
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,50 @@
+{
+  "result": {
+    "payload": {
+      "type": "generic-template",
+      "aspectRatio": "horizontal",
+      "sharable": true,
+      "elements": [
+        {
+          "title": "漢堡",
+          "imageUrl": "http://76.com.tw/happy/download/04/images/03.jpg",
+          "buttons": [
+            {
+              "type": "postback",
+              "label": "查看",
+              "value": "view_h",
+              "answer": "",
+              "alert": false,
+              "style": "default"
+            }
+          ]
+        },
+        {
+          "title": "蛋餅",
+          "imageUrl": "http://76.com.tw/happy/download/04/images/03.jpg",
+          "buttons": [
+            {
+              "type": "postback",
+              "label": "view_o",
+              "value": "F",
+              "answer": "",
+              "alert": false,
+              "style": "default"
+            }
+          ]
+        }
+      ],
+      "chatId": "2227048243983599",
+      "messageId": null
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "e0ce6877.a39798"
+  },
+  "message": "",
+  "status": 200
+}

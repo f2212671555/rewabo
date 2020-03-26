@@ -1,0 +1,52 @@
+{
+  "result": {
+    "payload": {
+      "type": "generic-template",
+      "aspectRatio": "horizontal",
+      "sharable": true,
+      "elements": [
+        {
+          "title": "薯條大特價只要9塊喔喔喔",
+          "subtitle": "薯條\n只要9元",
+          "imageUrl": "https://ai-rest.cse.ntou.edu.tw/薯條.jpg",
+          "buttons": [
+            {
+              "type": "url",
+              "label": "前往點餐並加入餐點",
+              "url": "https://ai-rest.cse.ntou.edu.tw/rewabo/order.html",
+              "webViewHeightRatio": "full",
+              "extensions": true,
+              "alert": false
+            }
+          ]
+        },
+        {
+          "title": "你的蛋蛋只要一塊",
+          "subtitle": "荷包蛋\n只要1元",
+          "imageUrl": "https://ai-rest.cse.ntou.edu.tw/荷包蛋.jpeg",
+          "buttons": [
+            {
+              "type": "url",
+              "label": "前往點餐並加入餐點",
+              "url": "https://ai-rest.cse.ntou.edu.tw/rewabo/order.html",
+              "webViewHeightRatio": "full",
+              "extensions": true,
+              "alert": false
+            }
+          ]
+        }
+      ],
+      "chatId": "Allen",
+      "messageId": "J3C2zAMqJavQEQS9DF2cJPnorUe71_yCEq9QmuomnSLQmc0lBzKhUHzcJoLwBsGulJcs6Radm5fScKXNpxWB9Q"
+    },
+    "originalMessage": {
+      "transport": "facebook",
+      "chat": {
+        "id": "2227048243983599"
+      }
+    },
+    "_msgid": "358a5ddd.e95152"
+  },
+  "message": "",
+  "status": 200
+}

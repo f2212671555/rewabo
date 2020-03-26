@@ -1,0 +1,64 @@
+{
+  "nicp": {
+    "shopKeeper": {
+      "id": ""
+    },
+    "urls": {
+      "baseUrl": "",
+      "services": {
+        "orderStatusChange_url": "/OrderStatusChange"
+      }
+    }
+  },
+  "rewabo": {
+    "platform": {
+      "name": "Rewabo",
+      "type": "早餐店",
+      "id": ""
+    },
+    "protocol": "wss",
+    "hostname": "",
+    "port": "",
+    "urls": {
+      "baseUrl": "",
+      "services": {
+        "showOrder_by_status_waiting_url": "/ShowOrder?Status=待製作",
+        "showOrder_by_status_making_url": "/ShowOrder?Status=製作中",
+        "showOrder_by_status_finished_url": "/ShowOrder?Status=已完成",
+        "showOrder_by_status_paid_url": "/ShowOrder?Status=已結帳",
+        "showMessageServlet_url": "/ShowMessageServlet",
+        "f1_fan_status_url": "/1fFanStatus",
+        "f2_fan_status_url": "/2fFanStatus",
+        "showPeopleServlet_url": "/ShowPeopleServlet",
+        "configIoT_url": "/ConfigIoT",
+        "menuCategoryAPI_url": "/MenuCategoryAPI",
+        "menuItemAPI_url": "/MenuItemAPI",
+        "addPushInfoServlet_url": "/AddPushInfoServlet",
+        "notificationAPI_url": "/NotificationAPI",
+        "customerServiceServlet_url": "/CustomerServiceServlet",
+        "deletePushInfoServlet_url": "/DeletePushInfoServlet",
+        "pushInfoServlet_url": "/PushInfoServlet",
+        "notificationSettingAPI_url": "/NotificationSettingAPI",
+        "orderHistoryAPI_by_CustomerID_url": "/OrderHistoryAPI?CustomerID=",
+        "showOrderByDate_by_CustomerID_FromDate_ToDate_url": "/ShowOrderByDate?CustomerID=",
+        "deleteOrderServlet_url": "/DeleteOrderServlet",
+        "logoutServlet_url": "/LogoutServlet",
+        "setOrderStatusServlet_url": "/SetOrderStatusServlet",
+        "menuItemAPI_by_oneSet_id_url": "/MenuItemAPI?action=oneSet&_id=",
+        "addOrderServlet_url": "/AddOrderServlet"
+      },
+      "endpoint": {
+        "bossOrderEndpoint": "/rewabo/bossOrderEndpoint",
+        "iotEndpoint": "/rewabo/iotEndpoint",
+        "endpoint": "/rewabo/endpoint"
+      },
+      "dialogFlow": {
+        "intent_list_url": "/DialogFlowManagerServlet/intents/list",
+        "intent_get_url": "/DialogFlowManagerServlet/intents/get",
+        "intent_create_url": "/DialogFlowManagerServlet/intents/create",
+        "intent_delete_url": "/DialogFlowManagerServlet/intents/delete?Intent_Id=",
+        "intent_addTrainingPhrases_url": "/DialogFlowManagerServlet/intents/addTrainingPhrases"
+      }
+    }
+  }
+}
